@@ -1,0 +1,889 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');    
+
+* {
+    font-family: "Mulish", serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Nunito", serif;
+}
+
+body{
+    background: #F5F5F5;
+}
+
+.navbar-nav a{
+    font-size: 25px;
+    margin-left: 30px;
+    transition: transform 0.5s;
+}
+
+.navbar-nav a:hover{
+    transform: scale(1.2);
+}
+
+.hero-information{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.hero-paragraph{
+    font-size: 56px;
+    color: #4D4D4D;
+    margin-left: 25px;
+}
+
+.hero .title{
+    font-size: 128px;
+    color: #4A90E2;
+    line-height: 120px;
+}
+
+.hero .title strong{
+    font-family: "Nunito", serif;
+    font-weight: 800;
+}
+
+.hero .container .row .col{
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+}
+
+.hero .img-hero{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 150px;
+    position: relative;
+}
+
+.hero .img-hero img{
+    width: 100%;
+}
+
+.line{
+    height: 8px;
+    width: 60px;
+    margin-top: 42px;;
+    border-radius: 50px;
+    background-color: #FFB826;
+}
+
+.about, .services, .portfolio, .slogan, .contact{
+    background: white;
+    padding: 150px 0px;
+}
+
+.about .col:nth-child(2),
+.services .col:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+.about h2, .services h2, .portfolio h2, .contact h2{
+    font-size: 88px;
+    color: #4A90E2;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about p{
+    font-size: 32px;
+    color: #4D4D4D;
+}
+
+.container-services{
+    text-align: center;
+    color: #4D4D4D;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.container-services .service-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container-services img{
+    height: 110px;
+}
+
+.container-services h4{
+    font-weight: 800;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.container-services p{
+    margin-bottom: 80px;
+}
+
+.slider{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+}
+
+.slider .button-right i, 
+.slider .button-left i{
+    font-size: 5em;
+    color:#4A90E2;
+    cursor: pointer;
+}
+
+.slider .button-left:hover i{
+    transform: scale(2);
+}
+
+.slider .display{
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .display .content-slider{
+    width: 300%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: margin 0.5s linear;
+}
+
+.slider .display .content-slider .slide{
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-gap: 20px;
+}
+
+.slide .first:hover{
+    position: relative;
+}
+
+.slide .second:hover{
+    position: relative;
+}
+
+.slide .content-slider{
+    position: relative;
+}
+
+.slide .content-first{
+    position: relative;   
+}
+
+.slide .content-second{
+    position: relative;   
+}
+
+.slide .content-first .first{
+    width: 100%;
+}
+
+.slide .content-second .second{
+    width: 100%;
+}
+
+.slide .content-first:hover .first{
+    position: absolute;
+    z-index: 500;
+    animation: expandWidthRight 0.5s ease-in-out forwards; 
+}
+
+.slide .content-first:not(:hover) .first{
+    position: absolute;
+    animation: shrinkWidthLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes expandWidthRight {
+    0% {
+        width: 100%;   
+    }
+    100% {
+        width: 205%;
+    }
+}
+
+@keyframes shrinkWidthLeft {
+    0% {
+        width: 205%;
+        z-index: 500;
+    }
+    100% {
+        z-index: 200;
+        width: 100%;   
+    }
+}
+
+.slide .content-second:hover{
+    position: relative;
+    z-index: 500;
+    animation: moveLeft 0.5s ease-in-out forwards;
+}
+
+.slide .content-second:not(:hover){
+    position: relative;
+    z-index: 200;
+    animation: moveRight 0.5s ease-in-out forwards;
+}
+
+@keyframes moveLeft {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -105%;
+    }
+}
+
+@keyframes moveRight {
+    0%{
+        left: -105%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+.slide .content-second:hover .second{
+    animation: expandWidthLeft 0.5s ease-in-out forwards; 
+}
+
+.slide .content-second:not(:hover) .second{
+    animation: shrinkWidthRight 0.5s ease-in-out forwards;
+}
+
+@keyframes expandWidthLeft {
+    0% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        width: 205%;
+    }
+}
+
+@keyframes shrinkWidthRight {
+    0% {
+        width: 205%;
+    }
+    100% {
+        width: 100%;   
+    }
+}
+
+.slide .first,
+.slide .second{
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.slider .title{
+    padding: 0px 30px;
+    border-radius: 10px;
+    background-color: #4A90E2;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    color: white;
+    font-size: 56px;
+    font-weight: 800;
+    font-family: "Nunito", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan .container-slogan{
+    background: #F5F5F5;
+    padding: 150px 0px; 
+    text-align: center;
+    font-size: 64px;
+    color: #4D4D4D;
+}
+
+.slogan .border-top-slogan{
+    height: 300px;
+    background-image: url(../img/fondo-frase.svg);
+    background-size: cover;
+    background-position: top;
+
+    text-align: center;
+}
+
+.slogan .border-top-slogan img{
+    position: relative;
+    bottom: 35px
+}
+
+.slogan .border-bottom-slogan{
+    height: 300px;
+    background-image: url(../img/fondo-frase.svg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.slogan span img{
+    width: 100px;
+}
+
+.slogan span:first-child img{
+    position: relative;
+    top: -24px;
+    left: -20px;
+}
+
+.slogan span:last-child img{
+    transform: rotate(180deg);
+    position: relative;
+    top: 19px;
+    left: 20px;
+}
+
+.contact{
+    padding-bottom: 180px;
+}
+
+.contact p{
+    font-size: 32px;
+    color:#4D4D4D
+}
+
+.contact p img{
+    margin-right: 30px;
+}
+
+.contact .content-social{
+    width: 700px;
+    display: grid;
+    grid-template-areas: "linetop"
+                         "social"
+                         "linebottom";
+    margin-left: auto;
+}
+
+.contact .content-social .line:first-child{
+    grid-area: linetop;
+    width: 100%;
+    height: 2px;
+    border-radius: 0px;
+    background-color: #4A90E2;
+}
+
+.contact .content-social .line:last-child{
+    grid-area: linebottom;
+    width: 100%;
+    height: 2px;
+    border-radius: 0px;
+    background-color: #4A90E2;
+    margin-top: 0;
+}
+
+.contact .content-social .content-link-social{
+    grid-area: social;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.contact .content-social .content-link-social a{
+    text-decoration: none;
+    color: #4D4D4D;
+    font-size: 27px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contact .content-social .content-link-social a:first-child{
+    margin-left: 30px;
+}
+
+.contact .content-social .content-link-social a:last-child{
+    margin-right: 30px;
+}
+
+.button-contact{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 800;
+}
+
+.circle-button{
+    width: 90px;
+    height: 90px;
+    padding: 13px;
+    border-radius: 50%;
+    background: #4A90E2;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin-left: auto;
+}
+
+.circle-button:hover{
+    transform: scale(0.8);
+}
+
+.circle-button img{
+    width: 100%;
+}
+
+.circle-button img:nth-child(2){
+    position: absolute;
+    width: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+}
+
+@media screen and (max-width: 1201px) {
+    .hero-paragraph{
+        font-size: 45px;
+        margin-left: 25px;
+    }
+
+    .hero .title{
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .hero .container .row .col{
+        grid-template-columns: 1fr 0.8fr;
+    }
+    
+    .hero .img-hero{
+        padding-top: 90px;
+    }
+
+    .hero .img-hero img{
+        width: 100%;
+    }
+
+    .hero .hero-paragraph{
+        font-size: 40px;
+    }
+
+    .about, .services, .portfolio, .slogan, .contact{
+        background: white;
+        padding: 90px 0px;
+    }
+    
+    .about h2, .services h2, .portfolio h2, .contact h2{
+        font-size: 50px;
+        margin-bottom: 17px;
+    }
+    
+    .about p{
+        font-size: 25px;
+    }
+
+    .container-services img{
+        height: 80px;
+    }
+    
+    .container-services h4{
+        margin-top: 30px;
+    }
+    
+    .container-services p{
+        margin-bottom: 50px;
+    }
+
+    .slide .first,
+    .slide .second{
+        height: 550px;
+    }
+
+    .slider .title{
+        font-size: 40px;
+    }
+
+    .slogan .container-slogan{
+        padding: 0px 0px;
+        font-size: 40px;
+    }
+
+    .slogan .border-top-slogan{
+        height: 250px;
+        text-align: center;
+    }
+    
+    .slogan .border-top-slogan img{
+        position: relative;
+        bottom: 35px;
+        width: 250px;
+    }
+    
+    .slogan .border-bottom-slogan{
+        height: 250px;
+    }
+    
+    .slogan span img{
+        width: 80px;
+    }
+    
+    .slogan span:first-child img{
+        position: relative;
+        top: -24px;
+        left: -20px;
+    }
+    
+    .slogan span:last-child img{
+        transform: rotate(180deg);
+        position: relative;
+        top: 19px;
+        left: 20px;
+    }
+
+    .contact{
+        padding-bottom: 200px;
+    }
+    
+    .contact p{
+        font-size: 25px;
+    }
+    
+    .contact p img{
+        margin-right: 30px;
+    }
+    
+    .contact .img-footer{
+        width: 200px;
+    }
+
+    .contact .content-social{
+        width: 100%;
+    }
+
+    .contact .content-social .content-link-social a{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .hero-information{
+        margin-top: 30px;
+    }
+    
+    .hero .hero-paragraph{
+        font-size: 55px;
+    }
+
+    .hero .title{
+        font-size: 120px;
+        line-height: 120px;
+    }
+
+    .hero .container .row .col{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .hero .img-hero{
+        padding-top: 20px;
+    }
+
+    .hero .img-hero img{
+        width: 90%;
+    }
+
+    .about .row{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .about h2{
+        text-align: left;
+        font-size: 50px;
+    }
+
+    .about p{
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .about img{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services .container-services{
+        width: 100%;
+        margin: 60px 0px;
+        overflow-x: scroll;
+    }
+
+    .container-services .service-display {
+        display: flex;
+    }
+    
+    .service-display{
+        width: 140%;
+        justify-content: space-between;
+    }
+    .services .container-services .services-display .target{
+        width: 100%;
+    }
+
+    .services .programer{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio .button-left{
+        display: none;
+    }
+
+    .portfolio .button-right{
+        display: none;
+    }
+
+    .slider {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .slide .first,
+    .slide .second{
+        height: 350px;
+    }
+
+    .slider .title{
+        font-size: 30px;
+        padding: 0px 15px;
+    }
+
+    .slogan .container-slogan{
+        padding: 20px 0px;
+        font-size: 30px;
+    }
+    
+    .slogan .border-top-slogan{
+        height: 150px;
+    }
+    
+    .slogan .border-top-slogan img{
+        width: 200px;
+        position: relative;
+        bottom: 29px;
+    }
+    
+    .slogan .border-bottom-slogan{
+        height: 150px;
+    }
+    
+    .slogan span img{
+        width: 60px;
+    }
+
+    .contact{
+        padding-bottom: 180px;
+    }
+    
+    .contact p{
+        font-size: 22px;
+    }
+    
+    .contact p img{
+        margin-right: 10px;
+    }
+
+    .contact-icon{
+        width: 30px;
+    }
+
+    .contact .content-social .content-link-social a{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .hero{
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .hero .title{
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .hero .hero-paragraph{
+        font-size: 30px;
+    }
+
+    .line{
+        height: 7px;
+        width: 50px;
+        margin-top: 30px;
+    }
+
+    .about{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .about p{
+        font-size: 23px;
+    }
+
+    .slide .first,
+    .slide .second{
+        height: 250px;
+    }
+    
+    .slide .title{
+        height: 250px;
+        font-size: 18px;
+    }
+
+    .button-contact{
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .slogan .border-top-slogan img{
+        width: 120px;
+    }
+
+    .contact{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .slogan .container-slogan{
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .slogan span img{
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0;
+    }
+    
+    .hero .title{
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 0;
+    }
+
+    .hero .hero-paragraph{
+        font-size: 28px;
+        line-height: 30px;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+
+    .hero .hero-paragraph br:last-child{
+        display: none
+    }
+
+    .line{
+        height: 5px;
+        width: 30px;
+        margin-top: 15px;
+    }
+
+    .about{
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+
+    .about p{
+        font-size: 20px;
+    }
+
+    .services h4{
+        font-size: 20px;
+    }
+
+    .services p{
+        font-size: 18px;
+    }
+    
+    .service-display{
+        width: 230%;
+    }
+
+    .slogan .border-top-slogan {
+        height: 80px;
+    }
+
+    .slogan .border-bottom-slogan {
+        height: 80px;
+    }
+
+    .slogan p{
+        font-size: 23px;
+        line-height: 20px;
+    }
+
+    .slogan span img{
+        width: 40px;
+    }
+    
+    .slogan span:first-child img {
+        top: -14px;
+        left: -11px;    
+    }
+
+    .slogan span:last-child img {
+        top: 9px;
+        left: 8px;    
+    }
+
+    .contact{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+    }
+
+    .contact p{
+        font-size: 18px;
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .contact .content-social .content-link-social a{
+        font-size: 16px;
+    }
+
+    .contact .content-social .content-link-social a:first-child {
+        margin-left: 10px;
+    }
+
+    .contact .content-social .content-link-social a:last-child {
+        margin-right: 10px;
+    }
+
+}
